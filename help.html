@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WZD Community - Hilfe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="help.css"> <!-- Neue CSS-Datei für Hilfe -->
+</head>
+<body>
+<header>
+    <div class="profile-links">
+        <a href="https://www.twitch.tv/wzd_richart99" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f843cefb-6451-4917-956c-6e1e78ab8fc8-profile_image-70x70.png" alt="Richart99" class="profile-image">
+        </a>
+        <h1>WZD Community Minecraft Server</h1>
+        <a href="https://www.twitch.tv/1206_WZD_Elchi" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/112944bf-1d56-4300-8532-e95f86090b0d-profile_image-70x70.png" alt="Elchi" class="profile-image">
+        </a>
+    </div>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="rules.html">Regeln</a>
+    <a href="dynmap.html">Live Map</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="history.html">Verlauf</a>
+    <a href="help.html">Hilfe</a>
+</nav>
+<main id="content">
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Suche nach Hilfeeinträgen...">
+    </div>
+    <div id="help-container"></div>
+    <p id="no-help-message" style="display: none;">Keine Hilfseinträge gefunden.</p>
+</main>
+<footer>
+    &copy; 2025 WZD Community. Alle Rechte vorbehalten.
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Funktion zum Laden der Hilfeeinträge
+async function loadHelp() {
+    const response = await fetch('hilfe.txt');
+    const data = await response.text();
+    
+    const entries = data.split('#').filter(entry => entry.trim() !== '').reverse(); // Neueste Einträge zuerst
+    
+    const helpContainer = document.getElementById('help-container');
+    
+    if (entries.length === 0) {
+        document.getElementById('no-help-message').style.display = 'block'; // Zeige Nachricht an
+        return;
+    }
+
+    entries.forEach(entry => {
+        const lines = entry.trim().split('\n');
+        const title = lines[0].trim();
+        const subtitle = lines[1].trim();
+        const content = lines.slice(2).join('\n').trim();
+
+        const box = document.createElement('div');
+        box.className = 'help-box';
+
+        const titleElement = document.createElement('h2');
+        titleElement.innerText = title;
+
+        const subtitleElement = document.createElement('h3');
+        subtitleElement.innerText = subtitle;
+
+        const contentElement = document.createElement('p');
+        contentElement.innerHTML = convertLinks(content); // Links konvertieren
+        contentElement.style.display = 'none'; // Zuerst verstecken
+
+        box.appendChild(titleElement);
+        box.appendChild(subtitleElement);
+        box.appendChild(contentElement);
+
+        // Event Listener für das Klicken auf die Box
+        box.addEventListener('click', () => {
+            const isVisible = contentElement.style.display === 'block';
+            contentElement.style.display = isVisible ? 'none' : 'block';
+            contentElement.classList.toggle('slide'); // Animation hinzufügen
+            box.classList.toggle('active'); // Für Animationseffekte bei geöffneten Boxen
+        });
+
+        helpContainer.appendChild(box);
+    });
+}
+
+// Funktion zum Konvertieren von Text in Links
+function convertLinks(text) {
+    const urlPattern = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlPattern, '<a href="$&" target="_blank">$&</a>');
+}
+
+// Suchfunktion für Hilfeeinträge
+function searchHelp() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const boxes = document.querySelectorAll('.help-box');
+    
+    let found = false;
+    
+    boxes.forEach(box => {
+        const titleText = box.querySelector('h2').innerText.toLowerCase();
+        const subtitleText = box.querySelector('h3').innerText.toLowerCase();
+        const contentText = box.querySelector('p').innerText.toLowerCase();
+        
+        if (titleText.includes(query) || subtitleText.includes(query) || contentText.includes(query)) {
+            box.style.display = 'block';
+            found = true;
+        } else {
+            box.style.display = 'none';
+        }
+    });
+
+    document.getElementById('no-help-message').style.display = found ? 'none' : 'block'; // Zeige Nachricht an, wenn nichts gefunden wurde
+}
+
+// Lade die Hilfeeinträge beim Laden der Seite
+loadHelp();
+
+// Füge Event Listener zur Suchleiste hinzu
+document.getElementById('search-bar').addEventListener('input', searchHelp);
+</script>
+
+</body>
+</html>

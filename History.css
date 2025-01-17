@@ -1,0 +1,52 @@
+main {
+    padding: 20px;
+}
+
+.history-box {
+    background-color: rgba(30, 30, 30, 0.8); /* Hintergrundfarbe */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 15px;
+    margin-bottom: 15px; /* Abstand zwischen den Boxen */
+    cursor: pointer; /* Zeigt an, dass die Box klickbar ist */
+}
+
+.history-box h2 {
+    color: #00ffcc; /* Titel in Neonfarbe */
+}
+
+.history-box h3 {
+    color: #ffffff; /* Untertitel in Weiß */
+}
+
+.history-box p {
+    color: #ffffff; /* Inhalt in Weiß */
+}
+
+/* Animation für das Öffnen und Schließen */
+.slide {
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Aktive Klasse für geöffnete Boxen */
+.history-box.active {
+    background-color: rgba(0, 255, 204, 0.5); /* Hellerer Hintergrund für aktive Boxen */
+}
+
+.profile-links {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Bildern und dem Titel */
+    align-items: center; /* Vertikale Zentrierung */
+    width: 100%; /* Volle Breite */
+}
+
+.profile-image {
+    width: 50px; /* Größe der Bilder */
+    height: 50px; /* Größe der Bilder */
+    border-radius: 50%; /* Runde Bilder */
+    object-fit: cover; /* Bild anpassen, um den Container zu füllen */
+    transition: transform 0.3s; /* Sanfte Übergänge bei Hover */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Vergrößert das Bild bei Hover */
+}

@@ -1,0 +1,104 @@
+body {
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+}
+
+.profile-links {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Bildern und dem Titel */
+    align-items: center; /* Vertikale Zentrierung */
+    width: 100%; /* Volle Breite */
+}
+
+.profile-image {
+    width: 50px; /* Größe der Bilder */
+    height: 50px; /* Größe der Bilder */
+    border-radius: 50%; /* Runde Bilder */
+    object-fit: cover; /* Bild anpassen, um den Container zu füllen */
+    transition: transform 0.3s; /* Sanfte Übergänge bei Hover */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Vergrößert das Bild bei Hover */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt */
+}
+
+.contact-container {
+    background-color: rgba(30, 30, 30, 0.8); /* Leicht hellere Farbe als der Hintergrund */
+    border-radius: 15px; /* Abgerundete Ecken */
+    padding: 30px;
+    max-width: 600px; /* Maximale Breite der Box */
+    margin: 0 auto; /* Zentriert die Box horizontal */
+    text-align: center; /* Zentriert den Text innerhalb der Box */
+}
+
+.contact-container h2 {
+    color: #00ffcc; /* Titel in Neonfarbe */
+    margin-bottom: 20px; /* Abstand unter dem Titel */
+}
+
+.contact-container p {
+    color: #ffffff; /* Weißer Text für den Absatz */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    margin-bottom: 30px; /* Abstand unter dem Absatz */
+}
+
+.discord-link {
+    display: flex;
+    justify-content: center; /* Zentriert den Discord-Link */
+}
+
+.discord-button {
+    display: flex;
+    align-items: center; /* Vertikale Zentrierung des Inhalts im Button */
+    justify-content: center; /* Horizontale Zentrierung des Inhalts im Button */
+    background-color: #000755;  /* Discord Blau */
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 10px; /* Abgerundete Ecken für den Button */
+    font-weight: bold; /* Fettdruck für den Text im Button */
+    transition: transform 0.3s ease; /* Sanfter Übergang beim Hover-Effekt */
+}
+
+.discord-button:hover {
+    transform: scale(1.05); /* Vergrößert den Button bei Hover */
+    background-color: #5f0000; /* Dunkleres Blau beim Hover-Effekt */
+}
+
+.discord-button img {
+    width: 30px; /* Größe des Discord-Logos im Button */
+    height: 30px; /* Größe des Discord-Logos im Button */
+    margin-right: 10px; /* Abstand zwischen Logo und Text im Button */
+}

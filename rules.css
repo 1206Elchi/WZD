@@ -1,0 +1,110 @@
+.profile-links {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Bildern und dem Titel */
+    align-items: center; /* Vertikale Zentrierung */
+    width: 100%; /* Volle Breite */
+}
+
+.profile-image {
+    width: 50px; /* Größe der Bilder */
+    height: 50px; /* Größe der Bilder */
+    border-radius: 50%; /* Runde Bilder */
+    object-fit: cover; /* Bild anpassen, um den Container zu füllen */
+    transition: transform 0.3s; /* Sanfte Übergänge bei Hover */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Vergrößert das Bild bei Hover */
+}
+
+body {
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+}
+
+.profile-links {
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Bildern und dem Titel */
+    align-items: center; /* Vertikale Zentrierung */
+}
+
+.profile-image {
+    width: 50px; /* Größe der Bilder */
+    height: 50px; /* Größe der Bilder */
+    border-radius: 50%; /* Runde Bilder */
+    transition: transform 0.3s; /* Sanfte Übergänge bei Hover */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Vergrößert das Bild bei Hover */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    padding: 10px;
+}
+
+nav a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt */
+}
+
+.box {
+    background-color: rgba(30, 30, 30, 0.8); /* Leicht hellere Farbe als der Hintergrund */
+    border-radius: 10px; /* Abgerundete Ecken */
+    padding: 20px;
+    margin-bottom: 20px; /* Abstand zwischen den Boxen */
+    width: 80%; /* Breite der Boxen */
+}
+
+.box h2 {
+    color: #00ffcc; /* Titel in Neonfarbe */
+}
+
+/* Tabelle für Bestrafungen und Gewichtungsstufen */
+.penalties-table {
+    width: 100%; /* Breite der Tabelle */
+    border-collapse: collapse; /* Zusammenfalten der Ränder */
+}
+
+.penalties-table th,
+.penalties-table td {
+    border: 1px solid #00ffcc; /* Neonfarbe für die Tabellenränder */
+    padding: 10px; /* Innenabstand für Zellen */
+}
+
+.penalties-table th {
+    background-color: rgba(0,255,204,0.3); /* Hellerer Hintergrund für Überschriften */
+}
+
+.rules-list {
+    list-style-type: none; /* Keine Aufzählungszeichen */
+    padding-left: 0; /* Kein linker Abstand */
+}
+
+.rules-list li {
+    margin-bottom: 10px; /* Abstand zwischen den Listenelementen */
+}
+

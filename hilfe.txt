@@ -1,0 +1,22 @@
+# Mitspielen
+Wie werde ich gewhitlistet um auf dem Server zu spielen?
+Um Mitspielen zu können müsst ihr im Discord Minecraft-Namen Channel folgendes reinschreiben wenn ihr mindestens 5 Stunden Watchtime bei WZD_richart99 auf Twitch habt, dies könnt ihr mit !wt in dem Twitch Chat überprüfen. Was ihr schreiben müsst:
+
+Minecraft: [Minecraft Name]
+Twitch: [Twitch Name]
+Plattform: [Java/Bedrock] (Bedrock ist Konsole, Java nur am Pc)
+
+# Geld
+Wie kann ich einfach Geld auf dem Server verdienen?
+Mit /warp Adminshop kommt ihr in eine Halle wo ihr für einige Items 2 Schilder findet, die schilder wo iBuy steht könnt Ihr 16x Das Item für den Angezigten Betrag kaufen, dort wo iSell steht könnt ihr eure Items 16x für den gezeigten Preis verkaufen. 
+
+# Shop
+Wie kann ich einen eigenen Shop erstellen?
+Um einen Shop zu erstellen müsst ihr ein Schild an eine Kiste Plazieren und folgendes auf die kiste schreiben: 
+
+[Attribut]
+Was du willst
+Was du willst
+Preis
+
+hier findest du eine Liste der Attribute: https://dev.bukkit.org/projects/signshop/pages/signs

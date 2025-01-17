@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WZD Community - Verlauf</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css"> <!-- Neue CSS-Datei für Verlauf -->
+</head>
+<body>
+<header>
+    <div class="profile-links">
+        <a href="https://www.twitch.tv/wzd_richart99" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/f843cefb-6451-4917-956c-6e1e78ab8fc8-profile_image-70x70.png" alt="Richart99" class="profile-image">
+        </a>
+        <h1>WZD Community Minecraft Server</h1>
+        <a href="https://www.twitch.tv/1206_WZD_Elchi" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/112944bf-1d56-4300-8532-e95f86090b0d-profile_image-70x70.png" alt="Elchi" class="profile-image">
+        </a>
+    </div>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="rules.html">Regeln</a>
+    <a href="dynmap.html">Live Map</a>
+    <a href="contact.html">Kontakt</a>
+    <a href="history.html">Verlauf</a>
+    <a href="help.html">Hilfe</a>
+</nav>
+<main id="content">
+    <!-- Dynamisch geladene Inhalte werden hier angezeigt -->
+    <p id="no-changes-message" style="display: none;">Keine Änderungen wurden gemacht.</p>
+</main>
+<footer>
+    &copy; 2025 WZD Community. Alle Rechte vorbehalten.
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Funktion zum Laden der Verlaufseinträge
+async function loadHistory() {
+    const response = await fetch('verlauf.txt');
+    const data = await response.text();
+    
+    const entries = data.split('#').filter(entry => entry.trim() !== '').reverse(); // Neueste Einträge zuerst
+
+    const contentDiv = document.getElementById('content');
+    
+    if (entries.length === 0) {
+        document.getElementById('no-changes-message').style.display = 'block'; // Zeige Nachricht an
+        return;
+    }
+
+    entries.forEach(entry => {
+        const lines = entry.trim().split('\n');
+        const title = lines[0].trim();
+        const subtitle = lines[1].trim();
+        const author = lines[2].replace('Autor: ', '').trim();
+        const date = lines[3].replace('Datum: ', '').trim();
+        const content = lines.slice(4).join('\n').trim();
+
+        const box = document.createElement('div');
+        box.className = 'history-box';
+
+        const titleElement = document.createElement('h2');
+        titleElement.innerText = title;
+
+        const subtitleElement = document.createElement('h3');
+        subtitleElement.innerText = subtitle;
+
+        const authorElement = document.createElement('p');
+        authorElement.innerText = `Autor: ${author}`;
+        
+        const dateElement = document.createElement('p');
+        dateElement.innerText = `Datum: ${date}`;
+
+        const contentElement = document.createElement('p');
+        contentElement.innerText = content;
+        contentElement.style.display = 'none'; // Zuerst verstecken
+
+        box.appendChild(titleElement);
+        box.appendChild(subtitleElement);
+        box.appendChild(authorElement);
+        box.appendChild(dateElement);
+        box.appendChild(contentElement);
+
+        // Event Listener für das Klicken auf die Box
+        box.addEventListener('click', () => {
+            const isVisible = contentElement.style.display === 'block';
+            contentElement.style.display = isVisible ? 'none' : 'block';
+            contentElement.classList.toggle('slide'); // Animation hinzufügen
+            box.classList.toggle('active'); // Für Animationseffekte bei geöffneten Boxen
+        });
+
+        contentDiv.appendChild(box);
+    });
+}
+
+// Lade die Verlaufseinträge beim Laden der Seite
+loadHistory();
+</script>
+
+</body>
+</html>
