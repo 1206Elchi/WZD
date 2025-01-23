@@ -1,12 +1,13 @@
 # Mitspielen
 Wie werde ich gewhitlistet um auf dem Server zu spielen?
-Um Mitspielen zu können müsst ihr im Discord Minecraft-Namen Channel folgendes reinschreiben wenn ihr mindestens 5 Stunden Watchtime bei WZD_richart99 auf Twitch habt, dies könnt ihr mit !wt in dem Twitch Chat überprüfen. <br>Was ihr schreiben müsst:
+Um Mitspielen zu können müsst ihr im Discord Minecraft-Namen Channel folgendes reinschreiben wenn ihr mindestens 5 Stunden Watchtime bei WZD_richart99 auf Twitch habt, dies könnt ihr mit !wt in dem Twitch Chat überprüfen.<br>
+Was ihr schreiben müsst:<br>
 <br>
-<br>Minecraft: [Minecraft Name]
-<br>Twitch: [Twitch Name]
-<br>Plattform: [Java/Bedrock] (Bedrock ist Konsole, Java nur am Pc)
+Minecraft: [Minecraft Name]<br>
+Twitch: [Twitch Name]<br>
+Plattform: [Java/Bedrock] (Bedrock ist Konsole, Java nur am Pc)<br>
 <br>
-<br>Hier noch die IP: mc.netrock.at, wir sehen uns auf dem Server! :) 
+Hier noch die IP: mc.netrock.at, wir sehen uns auf dem Server! :) <br>
 
 # Geld
 Wie kann ich einfach Geld auf dem Server verdienen?
@@ -14,11 +15,11 @@ Mit /warp Adminshop kommt ihr in eine Halle wo ihr für einige Items 2 Schilder 
 
 # Shop
 Wie kann ich einen eigenen Shop erstellen?
-Um einen Shop zu erstellen müsst ihr ein Schild an eine Kiste Plazieren und folgendes auf die kiste schreiben: 
+Um einen Shop zu erstellen müsst ihr ein Schild an eine Kiste Plazieren und folgendes auf die kiste schreiben: <br>
 <br>
-<br>[Attribut]
-<br>Was du willst
-<br>Was du willst
-<br>Preis
+[Attribut]<br>
+Was du willst<br>
+Was du willst<br>
+Preis<br>
 <br>
 <br>Hier findest du eine Liste der Attribute: https://dev.bukkit.org/projects/signshop/pages/signs
