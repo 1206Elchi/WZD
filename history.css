@@ -7,6 +7,8 @@ main {
     border-radius: 10px; /* Abgerundete Ecken */
     padding: 15px;
     margin-bottom: 15px; /* Abstand zwischen den Boxen */
+    margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer; /* Zeigt an, dass die Box klickbar ist */
 }main {
     padding: 20px;

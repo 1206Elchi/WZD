@@ -4,3 +4,23 @@ Autor: Elchi
 Datum: 2025-01-17
 Die Website auf der du dich befindest wurde erstellt!
 
+# Smp 2.0
+Der Smp wurde neu gemacht!
+Autor: Elchi
+Datum: 2025-03-06
+Hier ein umfassender Changelog:
+
+- Spawn Island hinzugefügt
+- fliegen von Spawn Island hinzugefügt
+- Hologramm texte Hinzugefügt
+- /spawn wurde hinzugefügt
+- Neue Rollen hinzugefügt (darunter MVP, MVP+, MVP++) welche mit echtgeld zu erwerben sein werden (In Zukunft)
+- Border wurde auf 10000 Blöcke gesetzt
+- Sichtweite auf 15 Chunks erhöht (Experimentell)
+- Claim System hinzugefügt via GriefPrevention
+- Mobs haben nun zufällige Level welche sie stärker machen
+- Questlines wurden Hinzugefügt, diese kann man aktivieren durch das Interagieren mit einem NPC
+- Neue Designs für Ränge (Vorläufig nur Java)
+- Veinminer wurde eingebaut, durch Sneaken und abbauen wird die ganze Vein mit einmal abgebaut
+- Man kann nun Items mit /shop kaufen und Verkaufen
+- Gekaufte Spawner müssen Nach einer Zeit neu aktiviert werden und sind upgradebar
